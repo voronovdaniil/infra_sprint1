@@ -28,12 +28,9 @@ server {
         return 301 https://$host$request_uri;
     } # managed by Certbot
 
-
-
     listen 80;
     server_name 51.250.110.255 yandextaskiplatform.serveirc.com;
     return 404; # managed by Certbot
-
 
 }
 
@@ -45,12 +42,10 @@ server {
         client_max_body_size 20M;
     }
 
-
     location /admin/ {
         proxy_pass http://127.0.0.1:8080;
         client_max_body_size 20M;
     }
-
 
     location / {
         root   /var/www/kittygram;
@@ -58,19 +53,15 @@ server {
         try_files $uri /index.html;
     }
 
-
     location /media/ {
         alias /var/www/kittygram/media/;
     }
-
-
 
     listen 443 ssl; # managed by Certbot
     ssl_certificate /etc/letsencrypt/live/kittygramland.ddns.net/fullchain.pem; # managed by Certbot
     ssl_certificate_key /etc/letsencrypt/live/kittygramland.ddns.net/privkey.pem; # managed by Certbot
     include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
     ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
-
 
 }
 
@@ -80,12 +71,8 @@ server {
         return 301 https://$host$request_uri;
     } # managed by Certbot
 
-
-
-
     listen 80;
     server_name 51.250.110.255 kittygramland.ddns.net;
     return 404; # managed by Certbot
-
 
 }
