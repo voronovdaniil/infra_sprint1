@@ -65,7 +65,6 @@ server {
 
 }
 
-
 server {
     if ($host = kittygramland.ddns.net) {
         return 301 https://$host$request_uri;
