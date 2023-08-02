@@ -1,5 +1,5 @@
 IP: 51.250.110.255;
 name_taski: https://yandextaskiplatform.serveirc.com;
-name_kittygram: https://nicecats.hopto.org;
+name_kittygram: https://kittygramland.ddns.net;
 login: admin;
 password: erasmus2001;
